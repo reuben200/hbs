@@ -1,0 +1,16 @@
+<div class="receipt-note">
+    <h2>Check Your Order Status</h2>
+        <form action="/status" method="POST">
+            <label>Enter Order ID:</label>
+            <input type="text" name="orderId" required>
+            <button type="submit">Check Status</button>
+        </form>
+
+        {{#if status}}
+            <p>Order Status: <strong>{{status}}</strong></p>
+        {{/if}}
+
+        {{#if message}}
+            <p>{{message}}</p>
+        {{/if}}
+</div>

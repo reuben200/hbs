@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("https://img.goodfon.com/original/4000x2667/9/60/fastfud-gamburger-buterbrod-kartofel-fri-chernyi-fon-boke.jpg");
+    background-size:auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-content{
+    background: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 20px; */
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.welcome{
+    font-size: 40px;
+}
+.welcome-section h1{
+    font-size: 120px;
+    font-family:cursive;
+}
+.welcome-section {
+    line-height: 20px;
+}
+.sub{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.main-content .button-group{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.order{
+    border: 2px solid #03b0b6;
+    background: none;
+    padding: 20px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+.order:hover{
+    border: 2px solid #03b0b6;
+    background: #03b0b6;
+}
+
+
+.menu{
+    background-color: tomato;
+    border: 2px solid tomato;
+    padding: 20px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+.menu:hover{
+    border: 2px solid tomato;
+    background: none;
+}

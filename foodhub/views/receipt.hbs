@@ -1,0 +1,28 @@
+<section class="order-receipt">
+    <div class="receipt-note">
+        <h2>🧾 Order Receipt</h2>
+
+        <p><strong>Order ID:</strong> {{order._id}}</p>
+        <p><strong>Customer Name:</strong> {{order.customerName}}</p>
+        <p><strong>Delivery Address:</strong> {{order.address}}</p>
+
+        <h3>📌 Ordered Items:</h3>
+        <table border="1">
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+            {{#each items}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>${{this.price}}</td>
+            </tr>
+            {{/each}}
+        </table>
+
+        <h3>💰 Total Amount Paid: ${{totalAmount}}</h3>
+        <p class="status"><strong>Status:</strong> <em class="order-status">{{order.status}}</em></p>
+
+        <a href="/menu">🏠 Back to Menu</a>
+    </div>
+</section>

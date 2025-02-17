@@ -1,0 +1,26 @@
+<section class="place-order">
+    <div class="order-frm">
+        <h2>Place an Order</h2>
+<form action="/api/orders/order" method="POST">
+
+            <label>Name:</label>
+            <input type="text" name="customerName" required>
+
+            <label>Address:</label>
+            <input type="text" name="address" required>
+
+            <label>Select Menu Items:</label>
+            {{#each menu}}
+                <input type="checkbox" name="items" value="{{this._id}}"> {{this.name}} <br>
+            {{/each}}
+
+            <button type="submit">Submit Order</button>
+        </form>
+
+        {{#if message}}
+            <p>{{message}}</p>
+        {{/if}}
+    </div>
+    <div class="image-right"></div>
+
+</section>

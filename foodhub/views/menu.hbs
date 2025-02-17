@@ -1,0 +1,50 @@
+<section class="home-section">
+    <h1>Welcome to Our Restaurant</h1>
+      
+    
+
+    <!-- Menu Items -->
+    <span class="title-filter">
+        <h2>Menu</h2>
+        <span>
+            <!-- Category Filter -->
+            <label for="categoryFilter">Filter by Category:</label>
+            <select id="categoryFilter">
+                <option value="all">All</option>
+                {{#each categories}}
+                    <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </select>
+        </span>
+    </span>
+    <div class="menu-container" id="menuItems">
+        {{#each menu}}
+            <div class="menu-card" data-category="{{this.category}}">
+                <a href="#" class="image-a">
+                    <img alt="{{this.name}}" src="{{this.image}}">
+                </a>
+                <div class="menu-details">
+                    <span class="menu-name">
+                        <h4>{{this.name}}</h4>
+                    </span>
+                    <span class="desc"><b>Description: <span class="price">${{this.price}}</span></b>
+                    <em>{{this.description}}</em></span>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</section>
+
+<!-- JavaScript for Filtering -->
+<script>
+    document.getElementById("categoryFilter").addEventListener("change", function() {
+        const selectedCategory = this.value;
+        document.querySelectorAll(".menu-card").forEach(item => {
+            if (selectedCategory === "all" || item.getAttribute("data-category") === selectedCategory) {
+                item.style.display = "flex";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    });
+</script>
